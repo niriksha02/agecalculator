@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>welcome to age calculator app</title>
+
+    <!--Bootstrap attachment-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--External js attachment-->
+    <script src="index.js"></script>
+    <!--external css attachment-->
+    <link href="index.css" rel="stylesheet">
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4" id="block">
+
+
+
+                    <form method="post" >
+                    	<div class="panel panel-default">
+                            <div class="panel-heading"><h3>Age calculator</h3></div><br>
+
+                            <div class="panel-body">
+                            <h4>Today's Date</h4>
+                                <label class="head">Date</label>
+                                <label class="head">Month</label>
+                                <label class="head">Year</label><br>
+                                <select id="cd" class="">
+
+                                    <script>
+                                        var today = new Date();
+                                        var dd = today.getDate();
+                                        document.write("<option>"+dd+"</option>");
+                                        for(i=1;i<=31;i++)
+                                        {
+                                            document.write("<option>"+i+"</option>");
+                                        }
+                                    </script>
+                                </select>
+
+                                <select id="cm">
+
+                                        <script>
+                                            var today = new Date();
+                                            var mm = today.getMonth()+1;
+                                            document.write("<option>"+mm+"</option>");
+                                            for(i=1;i<=12;i++)
+                                            {
+                                                document.write("<option>"+i+"</option>");
+                                            }
+                                        </script>
+                                </select>
+
+                                <select id="cy">
+                                        <script>
+                                            var today = new Date();
+                                            var yy = today.getFullYear();
+                                            document.write("<option>"+yy+"</option>");
+                                            for(i=2019;i>=1940;i--)
+                                            {
+                                                document.write("<option>"+i+"</option>");
+                                            }
+                                        </script>
+                                </select><br><br>
+
+                            <h4>Your DOB</h4>
+
+
+                            <select id="yd">
+                                <option>
+                                    Date
+                                </option>
+                                <script>
+                                    for(i=1;i<=31;i++)
+                                    {
+                                        document.write("<option>"+i+"</option>");
+                                    }
+                                </script>
+                            </select>
+
+                            <select id="ym">
+                                    <option>
+                                        Month
+                                    </option>
+                                    <script>
+                                        for(i=1;i<=12;i++)
+                                        {
+                                            document.write("<option>"+i+"</option>");
+                                        }
+                                    </script>
+                            </select>
+
+                            <select id="yy">
+                                    <option>
+                                        Year
+                                    </option>
+                                    <script>
+                                        for(i=2018;i>=1940;i--)
+                                        {
+                                            document.write("<option>"+i+"</option>");
+                                        }
+                                    </script>
+                            </select><br><br>
+
+                            <input type="button" id="submit" onclick="return fun();" value="Calcaulate" class="btn btn-success">
+                            <input type="reset" value="Clear" onclick="clr(); class="btn btn-danger">
+
+                            <br>
+                            <br>
+
+                        <h4>Your age</h4>
+
+
+                            <label class="show_label" id="disp_year"></label>
+                            <label class="show_label" id="disp_month"></label>
+                            <label class="show_label" id="disp_days"></label>
+                        </div>
+                    </div>
+                    </form>
+
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
